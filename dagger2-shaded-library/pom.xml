@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project 
+  xmlns="http://maven.apache.org/POM/4.0.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.blinkist.dagger2</groupId>
+    <artifactId>dagger2-shaded</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <artifactId>dagger2-shaded-library</artifactId>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.google.dagger</groupId>
+      <artifactId>dagger</artifactId>
+      <version>${dagger.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.2.0</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <relocations>
+                <relocation>
+                  <pattern>javax.inject.Inject</pattern>
+                  <shadedPattern>javax.inject.Inject2</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>javax.inject.Named</pattern>
+                  <shadedPattern>javax.inject.Named2</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>javax.inject.Provider</pattern>
+                  <shadedPattern>javax.inject.Provider2</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>javax.inject.Qualifier</pattern>
+                  <shadedPattern>javax.inject.Qualifier2</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>javax.inject.Scope</pattern>
+                  <shadedPattern>javax.inject.Scope2</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>javax.inject.Singleton</pattern>
+                  <shadedPattern>javax.inject.Singleton2</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>dagger.Lazy</pattern>
+                  <shadedPattern>dagger.Lazy2</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>dagger.MembersInjector</pattern>
+                  <shadedPattern>dagger.MembersInjector2</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>dagger.Module</pattern>
+                  <shadedPattern>dagger.Module2</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>dagger.Provides</pattern>
+                  <shadedPattern>dagger.Provides2</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>dagger.Provides$Type</pattern>
+                  <shadedPattern>dagger.Provides2$Type</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>dagger.internal</pattern>
+                  <shadedPattern>dagger2.internal</shadedPattern>
+                </relocation>
+              </relocations>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

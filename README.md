@@ -27,12 +27,13 @@ class MyClass @Inject @Inject2 constructor() {
 
 4. Profit.
 
-You can read about this here:
-https://fernandocejas.com/2016/08/03/android-dagger-1-and-2-living-together/
+---
 
-Even though that article suggests the [Gradle Shadow Plugin](https://imperceptiblethoughts.com/shadow/), 
-I'm using the [Maven Shade Plugin](https://maven.apache.org/plugins/maven-shade-plugin/) 
-(which ultimately does the same thing here).
+📚 You can read more about it here:
+https://proandroiddev.com/dagger-1-and-dagger-2-together-917f082b3dd9
+
+➕And you might also be interested in this:
+https://github.com/blinkist/AssistedInject
 
 ## Updating and building
 

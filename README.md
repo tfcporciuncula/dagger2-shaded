@@ -1,4 +1,4 @@
-[<img src="https://jitpack.io/v/blinkist/dagger2-shaded.svg?style=flat-square">](https://jitpack.io/#blinkist/dagger2-shaded)
+[![Release](https://jitpack.io/v/blinkist/dagger2-shaded.svg?style=flat-square)](https://jitpack.io/#blinkist/dagger2-shaded)
 
 # Dagger 2 Shaded 🕶
 
@@ -10,8 +10,8 @@ repositories {
 }
 
 dependencies {
-  implementation 'com.github.blinkist.dagger2-shaded:dagger2-shaded-library:2.x'
-  kapt 'com.github.blinkist.dagger2-shaded:dagger2-shaded-compiler:2.x'
+  implementation 'com.github.blinkist.dagger2-shaded:dagger2-shaded-library:2.25.2'
+  kapt 'com.github.blinkist.dagger2-shaded:dagger2-shaded-compiler:2.25.2'
 }
 ```
 

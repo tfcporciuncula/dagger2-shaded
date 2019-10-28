@@ -19,7 +19,7 @@
   <description>Wrapper around Dagger 2 with the Maven Shade Plugin so we can have Dagger 1 and Dagger 2 living together</description>
 
   <properties>
-    <dagger.version>2.24</dagger.version>
+    <dagger.version>2.25.2</dagger.version>
   </properties>
 
 </project>

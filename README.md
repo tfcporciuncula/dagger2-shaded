@@ -10,8 +10,8 @@ repositories {
 }
 
 dependencies {
-  implementation 'com.github.blinkist.dagger2-shaded:dagger2-shaded-library:2.25.2'
-  kapt 'com.github.blinkist.dagger2-shaded:dagger2-shaded-compiler:2.25.2'
+  implementation 'com.github.blinkist.dagger2-shaded:dagger2-shaded-library:2.25.4'
+  kapt 'com.github.blinkist.dagger2-shaded:dagger2-shaded-compiler:2.25.4'
 }
 ```
 
